@@ -1,5 +1,7 @@
 package root.sample.model.entity
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import root.sample.network.response.BaseApiResponse
 import java.io.Serializable
 
@@ -38,9 +40,11 @@ data class NewsEntity(val totalResults: Int?,
     }
 }
 
+@Parcelize
 data class NewsViewParam(val totalResults: Int,
-                      val articles: List<NewsArticleViewParam>) : BaseApiResponse() {
+                      val articles: List<NewsArticleViewParam>) : BaseApiResponse(), Parcelable {
 
+    @Parcelize
     data class NewsArticleViewParam(
         val source: NewsArticleSourceViewParam,
         val author: String,
@@ -50,7 +54,8 @@ data class NewsViewParam(val totalResults: Int,
         val urlToImage: String,
         val publishedAt: String,
         val content: String
-    )
+    ) : Parcelable
 
-    data class NewsArticleSourceViewParam(val id: String, val name: String) : Serializable
+    @Parcelize
+    data class NewsArticleSourceViewParam(val id: String, val name: String) : Parcelable
 }

@@ -15,9 +15,12 @@
         android:theme="@style/Theme.AndroidBoilerplate">
 
         <activity
+            android:name=".module.newsdetail.NewsDetailActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".module.news.NewsActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

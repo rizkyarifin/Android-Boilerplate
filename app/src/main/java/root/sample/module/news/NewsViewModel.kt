@@ -3,8 +3,10 @@ package root.sample.module.news
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import androidx.paging.PagingData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import root.sample.base.BaseViewModel
 import root.sample.model.entity.NewsEntity
@@ -44,4 +46,7 @@ class NewsViewModel @Inject constructor(
     override fun observeNewsList(): LiveData<NewsViewParam> = requestNewsList
     override fun observeProgress(): LiveData<Boolean> = progressLiveData
     override fun observeError(): LiveData<String> = errorLiveData
+
+    override fun observeListData(): Flow<PagingData<NewsViewParam.NewsArticleViewParam>> =
+        repository.listData
 }

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Android Boilerplate</string>
     <string name="label_sedang_memuat">Loading</string>
+    <string name="news_detail">News Detail</string>
+    <string name="news">News</string>
 </resources>
