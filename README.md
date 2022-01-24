@@ -1,5 +1,5 @@
 # Android-Boilerplate
-Base project for android development with new technology.
+Base project for android development with new technology, included sample that show news from https://newsapi.org/.
 
 # Tech Stack
 
