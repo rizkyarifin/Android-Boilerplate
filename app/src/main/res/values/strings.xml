@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Boilerplate</string>
+    <string name="label_sedang_memuat">Loading</string>
+</resources>
